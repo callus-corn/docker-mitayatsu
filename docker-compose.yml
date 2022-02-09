@@ -1,0 +1,13 @@
+version: "3.0"
+
+services:
+  mysql:
+    build: ./mysql
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    env_file:
+      - ./mysql/my.env
+    volumes:
+      - ./mysql/conf.d:/etc/mysql/conf.d
+      - ./mysql/data:/var/lib/mysql
