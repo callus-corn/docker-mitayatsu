@@ -7,7 +7,7 @@ services:
     ports:
       - "3306:3306"
     env_file:
-      - ./mysql/env/mysql_credentials
+      - ./mysql/env/credentials
       - ./mysql/env/tz
     volumes:
       - ./mysql/conf.d:/etc/mysql/conf.d
